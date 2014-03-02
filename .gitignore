@@ -6,3 +6,6 @@
 db_repository
 flask
 node_modules
+venv
+.idea/
+pymongo

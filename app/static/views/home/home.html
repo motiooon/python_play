@@ -10,10 +10,14 @@
 
             </p>
 
+            <table class="table table-hover">
+                <tr ng-repeat="ppl in people">
+                    <td>{{ppl.author}}</td>
+                    <td>{{ppl.text}}</td>
+                    <td>{{ppl.tags}}</td>
+                </tr>
+            </table>
 
-                 <ul class="navbar-header" ng-repeat="ev in events">
-                    <li>{{ev.created}}  {{ev.type}}</li>
-                 </ul>
 
 
         </div>

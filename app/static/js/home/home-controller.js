@@ -2,9 +2,9 @@ angular.module('myapp')
   .controller('HomeController', ['$scope', '$http', function ($scope, $http) {
 
 
-        $http({method: 'GET', url: '/events'}).
+        $http({method: 'GET', url: '/people'}).
             success(function(data, status, headers, config) {
-              $scope.events = data;
+              $scope.people = data;
             }).
             error(function(data, status, headers, config) {
               // called asynchronously if an error occurs

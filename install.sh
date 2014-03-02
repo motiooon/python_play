@@ -1,4 +1,5 @@
 python virtualenv.py flask
+python virtualenv.py pymongo
 flask/bin/pip install setuptools --no-use-wheel --upgrade
 flask/bin/pip install flask==0.9
 flask/bin/pip install flask-login

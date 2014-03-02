@@ -6,12 +6,12 @@ import datetime
 
 
 client = MongoClient('127.0.0.1', 27017)
-db = client.customer_analitycs_development
+db = client.people
 
-@app.route("/events", methods=['GET', 'POST'])
+@app.route("/people", methods=['GET', 'POST'])
 def events_page():
     result = []
-    for ev in db.events.find({}, {'_id': 0}):
+    for ev in db.persons.find({}, {'_id': 0}):
         result.append(ev)
 
     dt_handler = lambda obj: (
@@ -20,10 +20,9 @@ def events_page():
         or isinstance(obj, datetime.date)
         else None)
 
-    events = dumps(result, default=dt_handler)
-    return events
-
-
+    ppl = dumps(result, default=dt_handler)
+    assert isinstance(ppl, str)
+    return ppl
 
 @app.route('/')
 def root():
