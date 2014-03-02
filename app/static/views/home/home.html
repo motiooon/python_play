@@ -5,15 +5,14 @@
             <p class="lead">This is your homepage, ready for editing</p>
 
             <p>
-             <span translate="main.like">If you like this Angular-Flask generator, please give us a star at </span>&nbsp;<a href="https://github.com/rayokota/generator-angular-flask" target="_blank" translate="main.github">Github</a>!
-
-
+             <span translate="main.like">If you like this Angular-Flask generator, please give us a star at </span>
+             <a href="/#/write">Create Post</a>
             </p>
 
             <table class="table table-hover">
                 <tr ng-repeat="ppl in people">
                     <td>{{ppl.author}}</td>
-                    <td>{{ppl.text}}</td>
+                    <td ng-bind-html="ppl.text"></td>
                     <td>{{ppl.tags}}</td>
                 </tr>
             </table>
