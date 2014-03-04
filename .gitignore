@@ -10,3 +10,4 @@ venv
 .idea/
 pymongo
 app/static/lib/
+app/uploads

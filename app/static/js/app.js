@@ -1,5 +1,5 @@
 // Declare app level module which depends on filters, and services
-angular.module('myapp', ['ngResource', 'ngRoute', 'ui.bootstrap', 'ui.date', 'ngCkeditor', 'ngSanitize'])
+angular.module('myapp', ['ngResource', 'ngRoute', 'ui.bootstrap', 'ui.date', 'ngCkeditor', 'ngSanitize', 'angularFileUpload'])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -8,5 +8,8 @@ angular.module('myapp', ['ngResource', 'ngRoute', 'ui.bootstrap', 'ui.date', 'ng
       .when('/write', {
         templateUrl: 'views/home/write.html',
         controller: 'CreateController'})
+     .when('/upload', {
+        templateUrl: 'views/home/upload.html',
+        controller: 'UploadController'})
       .otherwise({redirectTo: '/'});
   }]);

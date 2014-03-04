@@ -19,4 +19,3 @@ class Mocker:
             per = self.db.persons.insert(person)
 
         print "done inserting %i" % number_of_docs, 'of documents`'
-
